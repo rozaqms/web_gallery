@@ -86,12 +86,13 @@
         text-align: left;">
             <img src="./img/logo.png" alt="">
         </a>
-        <h4>Login</h4>
+        <h4>Register</h4>
         <form action="your_backend_script.php" method="post">
             <input type="text" name="username" placeholder="Username" required>
+            <input type="text" name="realname" placeholder="Real name" required>
+            <input type="text" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
-            <a href="/8">Dont have account</a>
-            <input type="submit" href="/7" value="Login">
+            <input type="submit" href="/7" value="Submit">
         </form>
     </div>
 
