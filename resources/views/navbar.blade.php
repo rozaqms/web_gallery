@@ -58,11 +58,11 @@
 				</a>
 				<img src="img/menu-icon.png" alt="" class="menu-icon">
 				<ul class="main-menu">
-					<li><a href="/7">Home</a></li>
-					<li><a href="/1">Gallery</a></li>
-					<li><a href="/2">Single gallery</a></li>
-					<li><a href="/5">Blog</a></li>
-					<li><a href="/4">Contact</a></li>
+					<li><a class="{{ ($title === "Home") ? 'active' : '' }}" href="/7">Home</a></li>
+					<li><a class="{{ ($title === "Gallery") ? 'active' : '' }}" href="/1">Gallery</a></li>
+					<li><a class="{{ ($title === "Single Gallery") ? 'active' : '' }}" href="/2">Single Gallery</a></li>
+					<li><a class="{{ ($title === "Blog") ? 'active' : '' }}" href="/5">Blog</a></li>
+					<li><a class="{{ ($title === "Contact") ? 'active' : '' }}" href="/4">Contact</a></li>
 				</ul>
 				<div class="social-links-warp">
 					<div class="social-links">
