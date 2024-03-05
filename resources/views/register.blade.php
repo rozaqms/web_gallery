@@ -90,7 +90,7 @@
         <form  action="/8" method="post">
             @csrf
             <input type="text" name="name" id="name" placeholder="Username" required>
-            {{-- <input type="text" name="real" id="real" placeholder="Real Name" required> --}}
+            <input type="text" name="real" id="real" placeholder="Real Name" required>
             <input type="text" name="email" id="email" placeholder="Email" required>
             <input type="password" name="password" id="password" placeholder="Password" required>
             <small><a href="/login">Have account</a></small>

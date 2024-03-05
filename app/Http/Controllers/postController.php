@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\post;
+use Illuminate\Support\Facades\Auth;
 
 class postController extends Controller
 {
@@ -26,7 +28,7 @@ class postController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     */
+     */ 
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -35,10 +37,17 @@ class postController extends Controller
             'deskripsi'=> 'required',
             
        ]);
+       if($request->file('foto')){
+        $validatedData['foto'] = $request->file('foto')->store('post-image','public');
+       }
+       $validatedData['id_user'] = Auth::user()->id;
+       post::create($validatedData);
+
+       return redirect()->back();
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resource.p
      */
     public function show(string $id)
     {

@@ -86,6 +86,14 @@
         text-align: left;">
             <img src="./img/logo.png" alt="">
         </a>
+
+        @if(session()->has('berhasil'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('berhasil') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        @endif
+
         <h4>Login</h4>
         <form action="/7" method="post">
             @csrf

@@ -9,13 +9,14 @@
 					<div class="col-xl-6 p-0">
 						<div class="contact-text">
 							<span>Ayo</span>
-							<h2>Tambahkan Aktifitas</h2>    
-							<form class="contact-form" action="/9" method="post"> 
-								<input type="file" name="foto" id="foto" placeholder="Tambahkan foto">
-								<input type="text" name="judul" id="judul" placeholder="Judul foto">
-								<textarea name="deskripsi" id="deskripsi" placeholder="Deskripsi"></textarea>
+							<h2>Tambahkan Aktifitas</h2>  
+						  
+							<form class="contact-form" action="/9" method="post" enctype="multipart/form-data"> 
                                 @csrf
-								<button class="site-btn">Simpan</button>
+								<input type="file" name="foto" id="foto" placeholder="Tambahkan foto">
+								<input type="text" name="judul_foto" id="judul_foto" placeholder="Judul foto">
+								<textarea name="deskripsi" id="deskripsi" placeholder="Deskripsi"></textarea>
+								<button class="site-btn" type="submit">Simpan</button>
 							</form>
 							{{-- <div class="contac-info">
 								<p>Main Str, no 23, New York</p>

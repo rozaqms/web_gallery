@@ -30,7 +30,7 @@ class registerController extends Controller
 
        $validatedData = $request->validate([
             'name'=> 'required',
-            // 'real'=> 'required',
+            'real'=> 'required',
             'email'=> 'required',
             'password'=> 'required',
             
@@ -38,7 +38,9 @@ class registerController extends Controller
 
         User:: create($validatedData);
 
-        return redirect('/login');
+        // $request->session()->flush('berhasil', 'Berhasil membuat akun! Silahkan login');
+
+        return redirect('/login')->with('berhasil', 'Berhasil! Silahkan login');
     }
 
 
