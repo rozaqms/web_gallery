@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-	<title>Photo Gallery HTML Template</title>
+	<title>Photo Gallery HTML Template | {{ $title }} </title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Photo Gallery HTML Template">
 	<meta name="keywords" content="endGam,gGaming, magazine, html">
@@ -62,6 +62,7 @@
 					<li><a class="{{ ($title === "Gallery") ? 'active' : '' }}" href="/1">Gallery</a></li>
 					<li><a class="{{ ($title === "Single Gallery") ? 'active' : '' }}" href="/2">Single Gallery</a></li>
 					<li><a class="{{ ($title === "Blog") ? 'active' : '' }}" href="/5">Blog</a></li>
+					<li><a class="{{ ($title === "Post") ? 'active' : '' }}" href="/9">Post</a></li>
 					<li><a class="{{ ($title === "Contact") ? 'active' : '' }}" href="/4">Contact</a></li>
 				</ul>
 				<div class="social-links-warp">

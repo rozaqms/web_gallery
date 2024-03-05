@@ -87,12 +87,14 @@
             <img src="./img/logo.png" alt="">
         </a>
         <h4>Register</h4>
-        <form action="your_backend_script.php" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="text" name="realname" placeholder="Real name" required>
-            <input type="text" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" href="/7" value="Submit">
+        <form  action="/8" method="post">
+            @csrf
+            <input type="text" name="name" id="name" placeholder="Username" required>
+            {{-- <input type="text" name="real" id="real" placeholder="Real Name" required> --}}
+            <input type="text" name="email" id="email" placeholder="Email" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <small><a href="/login">Have account</a></small>
+            <input type="submit"  value="Submit">
         </form>
     </div>
 

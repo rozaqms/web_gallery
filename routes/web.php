@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\registerController;
+use App\Http\Controllers\postController;
+use App\Models\post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,29 +18,66 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/7', function () {
-    return view('index');
+    return view('index', [
+        "title" => "Home"
+    ]);
 });
 Route::get('/1', function () {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
 Route::get('/2', function () {
-    return view('gallery-single');
+    return view('gallery-single', [
+        "title" => "Gallery Single"
+    ]);
 });
 Route::get('/3', function () {
     return view('elements');
 });
 Route::get('/4', function () {
-    return view('contact');
+    return view('contact', [
+        "title" => "Contact"
+    ]);
 });
 Route::get('/5', function () {
-    return view('blog');
+    return view('blog', [
+        "title" => "Blog"
+    ]);
 });
 Route::get('/6', function () {
     return view('About');
 });
-Route::get('/', function () {
-    return view('login');
+Route::get('/login', function () {
+    return view('login', [
+        "title" => "Login"
+    ]);
 });
 Route::get('/8', function () {
-    return view('register');
+    return view('register', [
+        "title" => "Register"
+    ]);
 });
+Route::get('/9', function () {
+    return view('post', [
+        "title" => "Post"
+    ]);
+});
+
+
+
+
+
+
+
+
+
+
+Route::get('/login',[loginController::class, 'index']);
+Route::post('/7',[loginController::class, 'login']);
+
+Route::get('/8',[registerController::class, 'index']);
+Route::post('/8',[registerController::class, 'Store']);
+
+Route::get('/9',[postController::class, 'index']);
+Route::post('/9',[postController::class, 'Post']);
