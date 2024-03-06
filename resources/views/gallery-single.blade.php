@@ -10,6 +10,7 @@
 						<div class="gallery-single-slider owl-carousel">
 							<img src="img/gallery-single/1.jpg" alt="">
 							
+							
 						</div>
 					</div>
 					<div class="col-xl-6 p-0">
