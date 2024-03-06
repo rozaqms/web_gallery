@@ -7,11 +7,14 @@
 			<div class="gallery-single-warp">
 				<div class="row">
 					<div class="col-xl-6 p-0">
+						@foreach ($post as $u)
+
 						<div class="gallery-single-slider owl-carousel">
-							<img src="img/gallery-single/1.jpg" alt="">
-							
+							<img src="/storage/post-image.$u->foto }}">
+						
 							
 						</div>
+						@endforeach	
 					</div>
 					<div class="col-xl-6 p-0">
 						<div class="gallery-single-text">

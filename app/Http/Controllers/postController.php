@@ -77,4 +77,11 @@ class postController extends Controller
     {
         //
     }
+
+    public function viewimg($username, $id){
+        $post = post::where('id', $id)->get();
+
+         return view('post-image', compact('post'), [
+        ]);
+    }
 }
