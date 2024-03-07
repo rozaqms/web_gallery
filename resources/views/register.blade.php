@@ -87,7 +87,7 @@
             <img src="./img/logo.png" alt="">
         </a>
         <h4>Register</h4>
-        <form  action="/8" method="post">
+        <form  action="/register" method="post">
             @csrf
             <input type="text" name="name" id="name" placeholder="Username" required>
             <input type="text" name="real" id="real" placeholder="Real Name" required>

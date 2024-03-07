@@ -24,7 +24,7 @@ class loginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('/7');
+            return redirect()->intended('/gallery');
         };
 
         return back()->withErrors('Login eror');

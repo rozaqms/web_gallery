@@ -3,7 +3,11 @@
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\postController;
+use App\Http\Controllers\singleController;  
+use App\Http\Controllers\ProfileController;  
+use App\Http\Controllers\galleryController;  
 use App\Models\post;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,48 +31,49 @@ Route::middleware('auth')->group(function () {
 
 
 
-    Route::get('/7', function () {
+    Route::get('/home', function () {
         return view('index', [
             "title" => "Home"
         ]);
     });
-    Route::get('/1', function () {
+    Route::get('/gallery', function () {
         return view('gallery', [
             "title" => "Gallery"
         ]);
     });
-    Route::get('/2', function () {
+    Route::get('/gallery-single', function () {
         $foto = post::all();
         return view('gallery-single', [
             "foto" => $foto,
             "title" => "Gallery Single"
         ]);
     });
-    Route::get('/3', function () {
+    Route::get('/elements', function () {
         return view('elements');
     });
-    Route::get('/4', function () {
-        return view('contact', [
-            "title" => "Contact"
-        ]);
-    });
-    Route::get('/5', function () {
+    
+    Route::get('/blog', function () {
         return view('blog', [
             "title" => "Blog"
         ]);
     });
-    Route::get('/6', function () {
+    Route::get('/about', function () {
         return view('About');
     });
 
-    Route::get('/8', function () {
+    Route::get('/register', function () {
         return view('register', [
             "title" => "Register"
         ]);
     });
-    Route::get('/9', function () {
+    Route::get('/post', function () {
         return view('post', [
             "title" => "Post"
+        ]);
+    });
+    Route::get('/edit', function () {
+        return view('edit', [
+            "title" => "Edit"
         ]);
     });
 });
@@ -78,12 +83,24 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/login', [loginController::class, 'index']);
-Route::post('/7', [loginController::class, 'login']);
+Route::post('/home', [loginController::class, 'login']);
 
-Route::get('/8', [registerController::class, 'index']);
-Route::post('/8', [registerController::class, 'Store']);
+Route::get('/register', [registerController::class, 'index']);
+Route::post('/register', [registerController::class, 'Store']);
 
-Route::get('/9', [postController::class, 'index']);
-Route::post('/9', [postController::class, 'store'])->name('post.store');
+Route::get('/post', [postController::class, 'index']);
+Route::post('/post', [postController::class, 'store'])->name('post.store');
+// Route::resource('/contact', ProfileController::class);
+Route::resource('/gallery-single', singleController::class);
+Route::resource('/gallery',galleryController::class);
 
 Route::post('/logout', [loginController::class, 'logout'])->name('logout');
+Route::delete('/delete/{id}', [postController::class, 'delete'])->name('delete');
+
+Route::get('/contact', function(){
+    // return Auth::user();
+    return view('contact',[
+        'user' => Auth::user(),
+        'title' => 'User'
+    ]);
+});

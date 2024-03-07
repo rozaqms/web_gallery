@@ -12,42 +12,15 @@
 				<li class="filter" data-filter=".animals">Animals</li>
 			</ul>
 			<div class="portfolio-gallery">
+				@foreach ($posts as $post)
 				<div class="gallery-item animals">
-					<img src="img/gallery/1.jpg" alt="">
+					<img src="{{ asset('storage/'.$post->foto) }}" class="rounded">
 					<div class="hover-links">
 						<a href="" class="site-btn sb-light">Next</a>
 					</div>
 				</div>
-				<div class="gallery-item nature">
-					<img src="img/gallery/2.jpg" alt="">
-					<div class="hover-links">
-						<a href="" class="site-btn sb-light">Next</a>
-					</div>
-				</div>
-				<div class="gallery-item love">
-					<img src="img/gallery/3.jpg" alt="">
-					<div class="hover-links">
-						<a href="" class="site-btn sb-light">Next</a>
-					</div>
-				</div>
-				<div class="gallery-item photo">
-					<img src="img/gallery/5.jpg" alt="">
-					<div class="hover-links">
-						<a href="" class="site-btn sb-light">Next</a>
-					</div>
-				</div>
-				<div class="gallery-item nature">
-					<img src="img/gallery/6.jpg" alt="">
-					<div class="hover-links">
-						<a href="" class="site-btn sb-light">Next</a>
-					</div>
-				</div>
-				<div class="gallery-item photo">
-					<img src="img/gallery/4.jpg" alt="">
-					<div class="hover-links">
-						<a href="" class="site-btn sb-light">Next</a>
-					</div>
-				</div>
+				@endforeach
+				
 			</div>
 
 		</div>

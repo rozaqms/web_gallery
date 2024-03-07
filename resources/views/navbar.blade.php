@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>Photo Gallery HTML Template | {{ $title }} </title>
+    <title>Photo Gallery | {{ $title }} </title>
     <meta charset="UTF-8">
     <meta name="description" content="Photo Gallery HTML Template">
     <meta name="keywords" content="endGam,gGaming, magazine, html">
@@ -62,13 +62,13 @@
                 <img src="img/menu-icon.png" alt="" class="menu-icon">
                 <ul class="main-menu">
 
-                    <li><a class="{{ $title === 'Home' ? 'active' : '' }}" href="/7">Home</a></li>
-                    <li><a class="{{ $title === 'Gallery' ? 'active' : '' }}" href="/1">Gallery</a></li>
-                    <li><a class="{{ $title === 'Single Gallery' ? 'active' : '' }}" href="/2">Single Gallery</a>
+                    {{-- <li><a class="{{ $title === 'Home' ? 'active' : '' }}" href="/home">Home</a></li> --}}
+                    <li><a class="{{ $title === 'Gallery' ? 'active' : '' }}" href="/gallery">Gallery</a></li>
+                    <li><a class="{{ $title === 'Single Gallery' ? 'active' : '' }}" href="/gallery-single">Single Gallery</a>
                     </li>
-                    <li><a class="{{ $title === 'Blog' ? 'active' : '' }}" href="/5">Blog</a></li>
-                    <li><a class="{{ $title === 'Post' ? 'active' : '' }}" href="/9">Post</a></li>
-                    <li><a class="{{ $title === 'Contact' ? 'active' : '' }}" href="/4">Contact</a></li>
+                    {{-- <li><a class="{{ $title === 'Blog' ? 'active' : '' }}" href="/blog">Blog</a></li> --}}
+                    <li><a class="{{ $title === 'Post' ? 'active' : '' }}" href="/post">Post</a></li>
+                    <li><a class="{{ $title === 'Contact' ? 'active' : '' }}" href="/contact">Profile</a></li>
                 </ul>
                 <div class="social-links-warp">
                     <div class="social-links">

@@ -11,7 +11,7 @@
 							<span>Ayo</span>
 							<h2>Tambahkan Aktifitas</h2>  
 						  
-							<form class="contact-form" action="/9" method="post" enctype="multipart/form-data"> 
+							<form class="contact-form" action="/post" method="post" enctype="multipart/form-data"> 
                                 @csrf
 								<input type="file" name="foto" id="foto" placeholder="Tambahkan foto">
 								<input type="text" name="judul_foto" id="judul_foto" placeholder="Judul foto">

@@ -95,11 +95,11 @@
         @endif
 
         <h4>Login</h4>
-        <form action="/7" method="post">
+        <form action="/home" method="post">
             @csrf
             <input type="text" name="email" id="email" placeholder="Email"  required>
             <input type="password" name="password" id="password" placeholder="Password" required>
-            <small><a href="/8">Dont have account</a></small>
+            <small><a href="/register">Dont have account</a></small>
             <input type="submit"  value="Login">
         </form>
     </div>
