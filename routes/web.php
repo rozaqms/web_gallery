@@ -58,7 +58,8 @@ Route::middleware('auth')->group(function () {
         ]);
     });
     Route::get('/about', function () {
-        return view('About');
+        return view('About', [
+        "title" => "About" ]);
     });
 
     Route::get('/register', function () {
@@ -92,6 +93,7 @@ Route::get('/post', [postController::class, 'index']);
 Route::post('/post', [postController::class, 'store'])->name('post.store');
 // Route::resource('/contact', ProfileController::class);
 Route::resource('/gallery-single', singleController::class);
+Route::get('/show/{id}', [singleController::class, 'image'])->name('show');
 Route::resource('/gallery',galleryController::class);
 
 Route::post('/logout', [loginController::class, 'logout'])->name('logout');

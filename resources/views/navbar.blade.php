@@ -15,13 +15,13 @@
 
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.cs') }}s" />
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" />
 
     <!-- Main Stylesheets -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
 
 
     <!--[if lt IE 9]>
@@ -64,21 +64,22 @@
 
                     {{-- <li><a class="{{ $title === 'Home' ? 'active' : '' }}" href="/home">Home</a></li> --}}
                     <li><a class="{{ $title === 'Gallery' ? 'active' : '' }}" href="/gallery">Gallery</a></li>
-                    <li><a class="{{ $title === 'Single Gallery' ? 'active' : '' }}" href="/gallery-single">Single Gallery</a>
-                    </li>
+                    {{-- <li><a class="{{ $title === 'Single Gallery' ? 'active' : '' }}" href="/gallery-single">Single Gallery</a>
+                    </li> --}}
                     {{-- <li><a class="{{ $title === 'Blog' ? 'active' : '' }}" href="/blog">Blog</a></li> --}}
                     <li><a class="{{ $title === 'Post' ? 'active' : '' }}" href="/post">Post</a></li>
                     <li><a class="{{ $title === 'Contact' ? 'active' : '' }}" href="/contact">Profile</a></li>
+                    <li><a class="{{ $title === 'About' ? 'active' : '' }}" href="/about">About</a></li>
                 </ul>
                 <div class="social-links-warp">
                     <div class="social-links">
-                        <a href=""><i class="fa fa-behance"></i></a>
+                        {{-- <a href=""><i class="fa fa-behance"></i></a>
                         <a href=""><i class="fa fa-dribbble"></i></a>
                         <a href=""><i class="fa fa-twitter"></i></a>
                         <a href=""><i class="fa fa-facebook"></i></a>
-                        <a href=""><i class="fa fa-pinterest"></i></a>
+                        <a href=""><i class="fa fa-pinterest"></i></a> --}}
                     </div>
-                    <div class="social-text">Find us on</div>
+                    <div class="social-text">Photo Gallery</div>
                 </div>
             </div>
             <div class="copyright">Colorlib 2018 @ All rights reserved</div>
@@ -89,7 +90,7 @@
         @yield('navbar')
 
     </div>
-    <!-- Search model -->
+    {{-- <!-- Search model -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch">x</div>
@@ -98,18 +99,19 @@
             </form>
         </div>
     </div>
-    <!-- Search model end -->
+    <!-- Search model end --> --}}
 
 
     <!--====== Javascripts & Jquery ======-->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nicescroll.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/circle-progress.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
+    <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('js/circle-progress.min.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
 
 </body>
 

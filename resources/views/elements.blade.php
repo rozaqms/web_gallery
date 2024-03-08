@@ -215,7 +215,7 @@
 		<!-- Page section end-->
 	</div>
 
-	<!-- Search model -->
+	{{-- <!-- Search model -->
 	<div class="search-model">
 		<div class="h-100 d-flex align-items-center justify-content-center">
 			<div class="search-close-switch">x</div>
@@ -224,7 +224,7 @@
 			</form>
 		</div>
 	</div>
-	<!-- Search model end -->
+	<!-- Search model end --> --}}
 
 
 	<!--====== Javascripts & Jquery ======-->

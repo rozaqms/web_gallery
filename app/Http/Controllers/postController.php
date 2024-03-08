@@ -36,7 +36,7 @@ class postController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'foto'=> 'requiredi|mimes:jpeg,jpg,png',
+            'foto'=> 'required|mimes:jpeg,jpg,png',
             'judul_foto'=> 'required',
             'deskripsi'=> 'required',
             
