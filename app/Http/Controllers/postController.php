@@ -137,4 +137,11 @@ class postController extends Controller
         //redirect to index
         return redirect()->route('galley-single')->with(['success' => 'Data Berhasil Dihapus!']);
     }
+
+    public function viewimg($username, $id){
+        $post = post::where('id', $id)->get();
+
+         return view('gallery-single', compact('post'), [
+        ]);
+    }
 }

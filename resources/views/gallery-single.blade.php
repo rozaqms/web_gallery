@@ -7,10 +7,10 @@
             <div class="row">
                 @foreach ($posts as $post)
                     <div class="col-xl-6 p-0">
-                        <div class="gallery-single-slider owl-carousel">
+                        <div class="">
 							<img src="{{ asset('storage/'.$post->foto) }}" class="rounded">
 
-
+                            <input type="hidden" value="{{ $post->foto }}" name="oldImage">
 
                         </div>
                     </div>
@@ -20,9 +20,9 @@
                             
                             <p>{!! $post->deskripsi !!}</p>
 
-                            <a href="" class="btn btn-sm btn-primary">EDIT</a>
+                            <a href="/gallery-single/{{ $post->id }}/edit" class="btn btn-sm btn-primary">EDIT</a>
 
-                            <form method="POST" action="{{ route('post.destroy', $post->id) }}">
+                            <form method="POST" action="/gallery-single/{{ $post->id }}">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
@@ -37,12 +37,5 @@
     <!-- Page section end-->
     </div>
 
-    <!-- Search model -->
-    <div class="search-model">
-        <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">x</div>
-            <form class="search-moderl-form">
-                <input type="text" id="search-input" placeholder="Search here.....">
-            </form>
-        </div>
+
     @endsection
