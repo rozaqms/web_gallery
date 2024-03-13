@@ -15,7 +15,6 @@
                                 @csrf
 								@method('PUT')
 
-								<div><input type="file" name="foto" id="foto" placeholder="Tambahkan foto"></div>
 								<label class="font-weight-bold">JUDUL</label>
                                 <input type="text" class="form-control @error('judul_foto') is-invalid @enderror" name="judul_foto" value="{{ old('judul_foto', $post->judul_foto) }}" placeholder="Masukkan Judul foto">
                             
